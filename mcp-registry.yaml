@@ -1,0 +1,27 @@
+args:
+- npm
+- install
+- "&&"
+- npm
+- run
+- build
+- "&&"
+- node
+- dist/index.js
+command: npx
+config_schema:
+  properties:
+    chrome_executable_path:
+      description: CHROME_EXECUTABLE_PATH environment variable
+      type: string
+  required: []
+  type: object
+description: Model Context Protocol servers for Playwright
+env:
+- name: CHROME_EXECUTABLE_PATH
+  value: config.chrome_executable_path
+license: MIT
+owner: executeautomation
+package: "@executeautomation/playwright-mcp-server"
+server_name: "@executeautomation/playwright-mcp-server"
+vendor: Cprime
